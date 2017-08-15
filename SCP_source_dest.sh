@@ -10,7 +10,7 @@ echo "file transfer started for $i"
 scp username@$i:/directory/* /tmp/scripts/$i
 echo "file transfer completed for $i"
 
-#To validate transferred files and add an extra string(host naem) for each line and save as a file
+#To validate transferred files and add an extra string(host name) for each line and save as a file
 # $i from below line respresents from above for loop
 ssh username@$i ls -l /directory | head -1 | sed "s/^/$i /"  >> b.txt
 
