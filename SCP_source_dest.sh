@@ -9,8 +9,12 @@ echo " directory created for $i"
 echo "file transfer started for $i"
 scp username@$i:/directory/* /tmp/scripts/$i
 
+<<<<<<< HEAD
 echo "file transfer completed for $i"
 #To validate transferred files and add an extra string(host naem) for each line and save as a file
+=======
+#To validate transferred files and add an extra string(host name) for each line and save as a file
+>>>>>>> origin/master
 # $i from below line respresents from above for loop
 ssh username@$i ls -l /directory | head -1 | sed "s/^/$i /"  >> b.txt
 # to run multiple arguments in remote host through ssh and provide your list of commands in script give input to below command
